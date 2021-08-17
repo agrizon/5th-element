@@ -1,13 +1,8 @@
-# from os import write
-# from pandas.core import frame
 import streamlit as st
 import numpy as np
 from PIL import Image
 import cv2
 from streamlit.proto.Video_pb2 import Video
-import imutils
-from imutils.video import VideoStream
-import os
 from streamlit_webrtc import webrtc_streamer
 
 # Configure streamlit page/must be the first activity done
@@ -159,37 +154,6 @@ def main():
 
     if select == 'WebCam(Testing)':
         detect_faces_with_webrtc()
-
-        # st.title("Webcam Live Feed")
-        # run = st.checkbox('Run')
-        # FRAME_WINDOW = st.image([])
-        # camera = cv2.VideoCapture(0)
-
-        # while run:
-        #     _, frame = camera.read()
-        #     frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-        #     FRAME_WINDOW.image(frame)
-        # else:
-        #     st.write('Stopped')
-
-        # st.write('Starting Video Streams...')
-        # vs = VideoStream(src=0).start()
-
-        # while True:
-        #     frame = vs.read()
-        #     frame = imutils.resize(frame, width=400)
-        #     st.video(frame)
-
-        #     # cv2.imshow('Frame', frame)
-        #     key = cv2.waitkey(1) & 0xFF
-
-        #     if key == ord('q'):
-        #         break
-
-        # cv2.destroyAllWindows()
-        # vs.stop()
-
-        # detect_faces_with_webcam()
 
     if select == 'About':
         st.subheader('About')

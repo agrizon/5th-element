@@ -1,1 +1,5 @@
 streamlit==0.86.0
+numpy==1.21.1
+pillow==8.3.1
+opencv==4.5.2
+streamlit_webrtc==0.26.0
