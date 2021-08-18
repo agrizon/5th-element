@@ -110,7 +110,7 @@ def main():
     select = st.sidebar.selectbox('Detection with:', dropdown)
 
     if select == 'Image':
-        _file = st.file_uploader('Pick an image ...',
+        _file = st.file_uploader('Pick an image (type: png, jpg, jpeg)',
                                  type=['png', 'jpg', 'jpeg'])
         if _file is None:
             st.write('No Images Loaded!')
@@ -139,7 +139,8 @@ def main():
                 st.success(f'Found {len(detected_eyes)} Eyes')
 
     if select == 'Video':
-        _file = st.file_uploader('Pick Video...', type=['mp4'])
+        _file = st.file_uploader(
+            'Pick a video clip (type: mp4):', type=['mp4'])
 
         if _file is None:
             st.write('No Vedio Loaded!')
