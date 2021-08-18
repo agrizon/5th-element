@@ -12,7 +12,7 @@ PAGE_CONFIG = {'page_title': '口罩偵測',
                'initial_sidebar_state': 'expanded'}
 
 st.set_page_config(**PAGE_CONFIG)
-st.title('Face Mask Detection')
+st.title('Real Time Face Mask Detections')
 
 content_type = ['image', 'vedio', 'webcam', 'dataset']
 
@@ -100,8 +100,8 @@ def detect_faces_with_webcam():
 
 
 def detect_faces_with_webrtc():
-    st.title("WebCam Realtime App")
     webrtc_streamer(key="example")
+    st.markdown("### Testing WebCam Realtime Vedio.... (may not work)")
 
 
 def main():
@@ -156,7 +156,11 @@ def main():
         detect_faces_with_webrtc()
 
     if select == 'About':
-        st.subheader('About')
+        st.markdown('# 第五組專案')
+        st.markdown('## 主題：即時口罩佩戴偵測')
+        st.markdown(
+            '## 動機：疫情時代，在公共場所以人力進行佩戴口罩之監測，需要大量的人力資源，如果能讓AI機器來偵測警告，就可以大幅度降低人力需求。')
+        st.markdown('## 目的：解決口罩監測需耗費大量人力資源的問題。')
 
 
 if __name__ == "__main__":
